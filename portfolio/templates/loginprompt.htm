@@ -1,0 +1,44 @@
+{% extends "base.htm" %}
+
+{% block title %} Ooops! {% endblock title %}
+{%block href%} <a href="/login" data-toggle="modal"> {%endblock href%}
+{%block login%} LOG-IN {%endblock login%}
+
+{% block body %}
+
+      <!-- LOGIN PROMPT-->
+      <div class="container-fluid h-400 d-flex justify-content-center">
+        <div class=" my-auto">
+        <div class='row mt-3 mb-0'>
+            <div class='col-12'>
+                <div class="text-center">
+                    <img src="https://static6.depositphotos.com/1150740/642/v/600/depositphotos_6420807-stock-illustration-track-delivery-with-driver-and.jpg" >             </div>
+                <p class="text-center" > <strong> G M T S </strong></p>
+                <h3 class="text-center"> Ooops! </h3>
+                <p class="text-center">Please login to continue.</p>
+            
+            </div>
+        </div>
+
+        </div>
+    
+     </div>
+
+     <div class="container">
+
+
+     <div class="row no-gutters">
+        <div class="mx-auto" style="width:160px">
+          <a href="/login" data-toggle="modal"> 
+            <button type="submit" class="btn btn-block btn-dark mt-2 px-5">Login</button>
+            </a>
+            <p class="mt-3">No account? <a href="/register">Sign up now!</a>.</p>
+          <!--<p class="mt-4">No account? <a href="/register"> <br>Sign up now!</a></p-->
+          <br>
+          <br>
+        </div>
+    </div>
+</div>
+
+      
+{% endblock body %}    

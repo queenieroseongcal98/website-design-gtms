@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <title>Home</title>
+  </head>
+  <body>
+    
+  <nav class="navbar fixed-top  navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a href="#" class="navbar-brand">
+            <img src="https://s3.amazonaws.com/codecademy-content/projects/bass/everywhere.svg" height="50" alt="GTMSLogo">
+        </a>
+          <a class="navbar-brand" href="/hcarrier/homecarrier">G  T  M  S</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/hcarrier/homecarrier/">Home</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/hcarrier/transactions/">Transactions</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/hcarrier/feedback/">Feedback</a>
+        </li>
+      
+      </ul>
+      
+      <form class="d-flex">
+        {% if user.is_authenticated %}
+        <li> Hello, {{user.first_name}}</li>
+            <a href="/home" data-toggle="modal"> 
+              <button type="button" class="btn btn-outline-light">LOGOUT</button>
+              </a>
+        {% endif %}
+          </form>
+
+    </div>
+  </div>
+</nav>
+      <!-- C A R O U S E L -->
+      <div class="container-fluid px-0">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+              <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+              <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
+            </ol>
+
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+              <img src="https://source.unsplash.com/1900x825/?aesthetic,japan" class="d-block w-100" alt="...">
+              <div class="carousel-caption">
+                <p><h4>HERMES EXPRESS</h4>
+                <h5> Delivered by the greek god of speed himself!</h5>
+                <!--a onclick="window.location='register';" class="btn btn-large btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Sign up now!</a-->
+                
+              </p>
+              </div>
+            </div>
+              <div class="carousel-item">
+                <img src="https://source.unsplash.com/1900x825/?aesthetic,korea" class="d-block w-100" alt="...">
+                <div class="carousel-caption">
+                  <p><h4>HERMES EXPRESS</h4>
+                  <h5> Delivered by the greek god of speed himself!</h5>
+                  
+                </p>
+                </div>  
+              </div>
+              <div class="carousel-item">
+                <img src="https://source.unsplash.com/1900x825/?aesthetic,ny" class="d-block w-100" alt="...">
+                <div class="carousel-caption">
+                  <p><h4>HERMES EXPRESS</h4>
+                  <h5> Delivered by the greek god of speed himself!</h5>
+                 
+                </p>
+                </div>
+              </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </a>
+        </div>
+      </div>
+      <!-- C A T C H   P H R A S E 
+        <div class="container">
+          <h5 class="text-center py-3"></h5> <br>
+          <h3 class="text-center"><strong>ABOUT THE PROJECT</strong></h3>
+        </div> -->
+        <br>
+        <br>
+      <!-- A B O U T   P R O J E C T-->
+      <div class="container">
+        <h6 class="text-center text-warning"><strong>ABOUT THE PROJECT</strong></h6>
+      </div>
+        <!--<div class="container my-3">
+        </div>
+        <div class="container my-3 px-5">-->
+
+        <div class="container">
+        <div class="card text-center">
+          <!--<div class="card-header text-dark bg-gradient"> <h6>About the Project</h6></div>-->
+          <div class="card-body">
+            <div class="card-title text-dark">
+            <h5> <strong>GOODS TRANSPORT MANAGEMENT SYSTEM </strong></h5>
+            <p class="card-text">
+              <hr>
+              <h6><br>
+              This system helps to manage the transport of goods of businesses. <br>
+               It provides the functionality to enter shipment information, enter <br>
+              loading detail, enter unloading detail, and the delivery information. <br>
+              It stores the information of containers to load the cargo and also <br>
+              keeps container off load details.
+            </h6>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- A B O U T  T H E  T E A M-->
+      <div class="container">
+        <h2 class="text-center"><br><strong>THE TEAM</strong></h2>
+      </div>
+        <div class="container my-3">
+        </div>
+        <div class="container my-3 px-5">
+
+
+
+          <!-- C O N T A C T  -->
+          <div class="card card-default" id="card_contacts">
+              <div id="contacts" class="panel-collapse collapse show" aria-expanded="true" >
+                  <ul class="list-group pull-down" id="contact-list">
+                      <li class="list-group-item">
+                          <div class="row w-100">
+                              <div class="col-12 col-sm-6 col-md-3 px-0">
+                                  <img src="https://scontent.fceb2-2.fna.fbcdn.net/v/t1.0-9/139014991_719651668977168_5538781247127819580_n.jpg?_nc_cat=104&ccb=2&_nc_sid=0debeb&_nc_eui2=AeGt-x2JoKIiW-L68efsjLDDxJeptzimY2fEl6m3OKZjZ5qGkS39hbhF1-6uxrggQMyCbhBPdTLhdBKNnCMf3viu&_nc_ohc=A9vPrhOtsCgAX-cvnsH&_nc_ht=scontent.fceb2-2.fna&oh=5167320a02c1fc25c61119e9eeaf6891&oe=60287294" alt="Marissa Escol Delapeña" class="rounded-circle mx-auto d-block img-fluid">
+                              </div>
+                              <div class="col-12 col-sm-6 col-md-9 text-center text-sm-left">
+                                  <!--<span class="fa fa-mobile fa-2x text-success float-right pulse" title="online now"></span>-->
+                                  <label class="name lead">Marissa Escol Delapeña</label>
+                                  <br> 
+                                  <span class="fa fa-map-marker fa-fw text-muted" data-toggle="tooltip" title="" data-original-title="Guindulman, Bohol"></span>
+                                  <span class="text-muted">Guindulman, Bohol</span>
+                                  <br>
+                                  <span class="fa fa-phone fa-fw text-muted" data-toggle="tooltip" title="" data-original-title="+639073183547"></span>
+                                  <span class="text-muted small">+639073183547</span>
+                                  <br>
+                                  <span class="fa fa-envelope fa-fw text-muted" data-toggle="tooltip" data-original-title="" title=""></span>
+                                  <span class="text-muted small text-truncate"></span>
+                              </div>
+                          </div>
+                      </li>
+                      <li class="list-group-item">
+                          <div class="row w-100">
+                              <div class="col-12 col-sm-6 col-md-3 px-0">
+                                  <img src="https://scontent.fceb2-2.fna.fbcdn.net/v/t1.0-9/139086568_719645152311153_771765983329067649_n.jpg?_nc_cat=104&ccb=2&_nc_sid=0debeb&_nc_eui2=AeF-1YQHmz7iTxW7KffpOFIhxC4mBTnb5kbELiYFOdvmRhA3O5rYRPbhlGpAF4S9BpEWfhlxT1DkftTLCmMC6wK3&_nc_ohc=zxrKLMxItlIAX_xxL4g&_nc_ht=scontent.fceb2-2.fna&oh=8633827c17dbe46251a0ff71c0bd6355&oe=6027D036" alt="Marrish Villacruz Oclarit" class="img-fluid rounded-circle d-block mx-auto">
+                              </div>
+                              <div class="col-12 col-sm-6 col-md-9 text-center text-sm-left">
+                                  <span class="name lead">Marrish Villacruz Oclarit</span>
+                                  <br>
+                                  <span class="fa fa-map-marker fa-fw text-muted" data-toggle="tooltip" title="" data-original-title="Jagna, Bohol"></span>
+                                  <span class="text-muted">Jagna, Bohol</span>
+                                  <br>
+                                  <span class="fa fa-phone fa-fw text-muted" data-toggle="tooltip" title="" data-original-title="+639494503159"></span>
+                                  <span class="text-muted small">+639494503159</span>
+                                  <br>
+                                  <span class="fa fa-envelope fa-fw text-muted" data-toggle="tooltip" title="" data-original-title="oclaritmarrish@gmail.com"></span>
+                                  <span class="text-muted small text-truncate">oclaritmarrish@gmail.com</span>
+                              </div>
+                          </div>
+                      </li>
+                      <li class="list-group-item">
+                          <div class="row w-100">
+                              <div class="col-12 col-sm-6 col-md-3 px-0">
+                                  <img src="https://scontent.fceb2-1.fna.fbcdn.net/v/t1.0-9/139610001_719649718977363_819916152318521670_n.jpg?_nc_cat=109&ccb=2&_nc_sid=0debeb&_nc_eui2=AeF8PWSZef1kpjNpAfUniNlAy6n7iwJI4WbLqfuLAkjhZsr-U8hrpD9BVQ4vMn9O9MMK-Q56XeLifyrRD37bGQ81&_nc_ohc=35J0yrrPYQsAX_gF9md&_nc_ht=scontent.fceb2-1.fna&oh=4ecfaad6958db13bce3b864f984baef6&oe=60260309" alt="Queenie Rose C. Ongcal" class="img-fluid rounded-circle d-block mx-auto">
+                              </div>
+                              <div class="col-12 col-sm-6 col-md-9 text-center text-sm-left">
+                                  <!--<span class="fa fa-envelope fa-lg text-danger float:right" title="left you a message"></span>-->
+                                  <span class="name lead">Queenie Rose Curam Ongcal</span>
+                                  <br> <span class="fa fa-map-marker fa-fw text-muted" data-toggle="tooltip" title="" data-original-title="Sevilla, Bohol"></span>
+                                  <span class="text-muted">Sevilla, Bohol</span>
+                                  <br>
+                                  <span class="fa fa-phone fa-fw text-muted" data-toggle="tooltip" title="" data-original-title="+639632111562"></span>
+                                  <span class="text-muted small">+639632111562</span>
+                                  <br>
+                                  <span class="fa fa-envelope fa-fw text-muted" data-toggle="tooltip" title="" data-original-title="ongcalq@gmail.com"></span>
+                                  <span class="text-muted small text-truncate">ongcalq@gmail.com</span>
+                                  <br>
+      
+                              </div>
+                          </div>
+                      </li>
+                      <li class="list-group-item">
+                          <div class="row w-100">
+                              <div class="col-12 col-sm-6 col-md-3 px-0">
+                                  <img src="https://scontent.fceb2-1.fna.fbcdn.net/v/t1.0-9/139385458_719642848978050_5840273118610496537_n.jpg?_nc_cat=103&ccb=2&_nc_sid=0debeb&_nc_eui2=AeFBvd0Xc6Vl3orNnErJXm8DvP7MLA5WwWW8_swsDlbBZWgaAiOqwLlIYZI9kTqYiIUpJ0n0VMiGyLtrE1ps0UL2&_nc_ohc=ZZNwrtpgzhEAX8ZKgxo&_nc_ht=scontent.fceb2-1.fna&oh=e4785111fc6d63084ab81cf0dc6adb9f&oe=6027AE01" alt="Carleen Ceros Rabino" class="img-fluid rounded-circle d-block mx-auto">
+                              </div>
+                              <div class="col-12 col-sm-6 col-md-9 text-center text-sm-left">
+                                  <label class="name lead">Carleen Ceros Rabino</label>
+                                  <br>
+      
+                                  <span class="fa fa-fw fa-map-marker fa-fw text-muted" data-toggle="tooltip" title="" data-original-title="Antequera, Bohol"></span>
+                                  <span class="text-muted">Antequera, Bohol</span>
+                                  <br>
+      
+                                  <span class="fa fa-fw fa-phone fa-fw text-muted" data-toggle="tooltip" title="" data-original-title="+639124636862"></span>
+                                  <span class="text-muted small">+639124636862</span>
+                                  <br>
+      
+                                  <span class="fa fa-fw fa-envelope fa-fw text-muted" data-toggle="tooltip" title="" data-original-title="carleenrabino23@gmail.com"></span>
+                                  <span class="text-muted small text-truncate">carleenrabino23@gmail.com</span>
+
+                              </div>
+                          </div>
+                      </li>
+                  </ul>
+                  <!--/contacts list-->
+              </div>
+          </div>
+      </div>
+
+      <div class="container">
+        <h2 class="text-center"><br><strong>G T M S <BR> BOHOL BRANCHES</strong></h2>
+      </div>
+        <div class="container my-3">
+        </div>
+        <div class="container my-3 px-5">
+
+      <!-- B R A N C H E S -->
+      <div class="container">
+        <div class="card-group px-4">
+          <div class="card border-white bg-dark text-white mb-3">          
+            <img class="card-img-top " src="https://scontent.fceb2-1.fna.fbcdn.net/v/t1.0-9/139515877_719918732283795_3241675696760142441_n.jpg?_nc_cat=101&ccb=2&_nc_sid=0debeb&_nc_eui2=AeHcq6vD_6C5i_OpEgjf38Ph_X9OenXki-j9f056deSL6N9n4DOY9khgD3kwDQ92GsT2JOFiwWbg4m021_PIEAGb&_nc_ohc=TLxt_o0BFJUAX9LjLNa&_nc_ht=scontent.fceb2-1.fna&oh=cc3be33ad44160870ee2a34ca410abb8&oe=6026EB14" alt="Jagna">
+            <div class="card-body">
+              <h5 class="card-title"><strong>Jagna Branch</strong></h5>
+              <p class="card-text">Jagna is a 3rd class municipality in the province of Bohol, Philippines. According to the 2015 census, it has a population of 33,892 people. Jagna is located on the southern coast of Bohol.</p>
+              <p class="card-text"><small class="text-muted">Looc, Jagna, Bohol 6308 Philippines</small></p>
+            </div>
+          </div>
+          <div class="card border-white bg-dark text-white mb-3">
+            <img class="card-img-top" src="https://scontent.fceb2-2.fna.fbcdn.net/v/t1.0-9/139094462_719915275617474_7397628233562320316_n.jpg?_nc_cat=110&ccb=2&_nc_sid=0debeb&_nc_eui2=AeHzDWinM_Dn6YObZo258zqmydRRxif1gvfJ1FHGJ_WC9-WQTKJsnuunOCk6WcpAYEjQOV2c0uFzr_OpHZuil-Ks&_nc_ohc=3TZ_TCOX-lgAX_AGVBS&_nc_ht=scontent.fceb2-2.fna&oh=015a36d6ad26555981fb8653733c8cf9&oe=60263636" alt="Tagbilaran">
+            <div class="card-body">
+              <h5 class="card-title"><strong>Tagbilaran - Main Branch</strong></h5>
+              <p class="card-text">Tagbilaran, officially the City of Tagbilaran, is a component city and capital of the province of Bohol, Philippines. According to the 2015 census, it has a population of 105,051 people.</p>
+              <p class="card-text"><small class="text-muted">CPG North Ave.,
+                6300 Tagbilaran City,
+                Bohol, Philippines</small></p>
+            </div>
+          </div>
+          <div class="card border-white bg-dark text-white mb-3">
+            <img class="card-img-top" src="https://scontent.fceb2-2.fna.fbcdn.net/v/t1.0-9/139205512_719926172283051_9073168045562893351_n.jpg?_nc_cat=110&ccb=2&_nc_sid=0debeb&_nc_eui2=AeGyK-S3vVdgRuVzfCgDKHBsGBub89j2GkcYG5vz2PYaR-W_0nPSMeJgZYde-bf6iFYeRcD8pWxjTPCFbqtgvwvz&_nc_ohc=N4YX0pZuwTkAX8Z59NR&_nc_ht=scontent.fceb2-2.fna&oh=80f4cb705b5c1473bec8e626acff8b99&oe=602671A5" alt="Getafe">
+            <div class="card-body">
+              <h5 class="card-title"><strong>Getafe Branch</strong></h5>
+              <p class="card-text">Getafe, officially the Municipality of Getafe, is a 3rd class municipality in the province of Bohol, Philippines. According to the 2015 census, it has a population of 30,955 people.</p>
+              <p class="card-text"><small class="text-muted">Getafe, Bohol 6334</small></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!--<div class="container-fluid">
+        <div class="card-group">
+          <div class="card">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">Last updated 3 mins ago</small>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">Last updated 3 mins ago</small>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img-top" src="..." alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">Last updated 3 mins ago</small>
+            </div>
+          </div>
+        </div>
+      </div>-->
+
+          
+          </div>
+        
+      
+      
+      <footer class="text-center text-dark">
+        <div class="container-fluid bottom-footer pt-2">
+          <div class="row">
+            <div class="col-12 text-center">
+              <p><b>Copyrights © 2021 - All rights reserved</b></p>
+            </div>
+          </div>
+        </div>
+    
+      </footer>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

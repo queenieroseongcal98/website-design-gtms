@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href= 
+"https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" /> 
+    <link rel="stylesheet" href= 
+"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity= 
+"sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
+          crossorigin="anonymous"> 
+    <script src= 
+"https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"> 
+    </script> 
+    <script src= 
+"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"> 
+    </script> 
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous" 
+    />
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <title>My Account</title>
+  </head>
+  <body>
+    <!--FIXED NAVBAR-->
+    <style>      
+      body{
+          padding-top:60px;
+      }
+      /* fix padding under menu after resize */
+      @media screen and (max-width: 767px) {
+          body { padding-top: 60px; }
+      }
+      @media screen and (min-width:768px) and (max-width: 991px) {
+          body { padding-top: 110px; }
+      }
+      @media screen and (min-width: 992px) {
+          body { padding-top: 60px; }
+      }
+
+      body {
+            text-align: center; 
+        } 
+          
+        /* Styling h1 tag */ 
+        h1 { 
+            color: rgb(201, 191, 59); 
+            text-align: center; 
+        } 
+          
+        /* Styling modal */ 
+        .modal:before { 
+            content: ''; 
+            display: inline-block; 
+            height: 100%; 
+            vertical-align: middle; 
+        } 
+
+       /* Styling modal */ 
+       .modal:before { 
+            content: ''; 
+            display: inline-block; 
+            height: 100%; 
+            vertical-align: middle; 
+        } 
+          
+        .modal-dialog { 
+            display: inline-block; 
+            vertical-align: middle; 
+        } 
+          
+        .modal .modal-content { 
+            padding: 20px 20px 20px 20px; 
+            -webkit-animation-name: modal-animation; 
+            -webkit-animation-duration: 0.5s; 
+            animation-name: modal-animation; 
+            animation-duration: 0.5s; 
+        } 
+          
+        @-webkit-keyframes modal-animation { 
+            from { 
+                top: -100px; 
+                opacity: 0; 
+            } 
+            to { 
+                top: 0px; 
+                opacity: 1; 
+            } 
+        } 
+          
+        @keyframes modal-animation { 
+            from { 
+                top: -100px; 
+                opacity: 0; 
+            } 
+            to { 
+                top: 0px; 
+                opacity: 1; 
+            } 
+        } 
+  </style>
+
+  
+
+ 
+            
+      {%comment %} N A V I G A T I O N  B A R {% endcomment %}
+      <nav class="navbar fixed-top  navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a href="#" class="navbar-brand">
+            <img src="https://s3.amazonaws.com/codecademy-content/projects/bass/everywhere.svg" height="50" alt="GTMSLogo">
+          </a>
+          <!--<a class="navbar-brand " href="/"></a-->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+              <li class="nav-item">
+                <a class="nav-link" href="/home">G M T S</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="/home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"  href="/register">Register</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="/rate">Shipping Rate</a>
+             
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="/contact">Contact us</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link active left" aria-checked="page"" href="/profile"><i class="fa-user-secret"></i>My Account</a>
+              </li>
+            </ul>
+            <!--<form class="d-flex">
+              <a href="/login" data-toggle="modal"> 
+                <button type="button" class="btn btn-outline-light">LOG-IN</button>
+                </a>
+            </form>-->
+          </div>
+       
+       
+       
+        </div>
+      </nav>
+      <!--
+      <form action="/transaction" method="post">
+        {% csrf_token %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+          <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      </form> -->
+      <h1> 
+          <br>
+          <br>
+        My Account
+      </h1> 
+
+      <br>
+
+     
+
+      <div class="container">
+        <div class="row mx-5">
+          <div class="col text-center">
+            <a href="/sender" data-toggle="modal"> 
+              <button type="submit" class="btn btn-dark">View recent transactions</button>
+              </a>
+          </div>
+        </div>
+
+        <br>
+        <button type="button" class="btn btn-dark btn-lg" data-toggle="modal" data-target="#sender">Send package</button>
+
+      
+
+
+      <a href="/receiver" data-toggle="modal"> 
+        <button type="submit" class="btn btn-dark">View packages</button>
+        </a>
+
+
+      
+    
+      <div class="modal" id="sender"
+           role="dialog" aria-labelledby="myModalLabel"
+           aria-hidden="true">  
+    
+          <div class="modal-dialog "> 
+              <div class="modal-content"> 
+    
+                  <!-- Modal root -->
+                  <div class="m-header"> 
+                      <button class="close" data-dismiss="modal"> 
+                          × 
+                      </button> 
+                      <h2 class="myModalLabel"> Send Form </h2> 
+                  </div> 
+    
+                  <!-- Modal body -->
+                  <div class="inputs"> 
+    
+                      <!-- sender's name -->
+                      <form action="/transaction" method="post">
+                      {% csrf_token %}
+                      <div class="form-group input-group"> 
+                          <label for="sname" class="sr-only"> 
+                            Sender's Full Name 
+                          </label> 
+                          
+                          <input type="text" class="form-control" name="sname"
+                                 id="sname" placeholder="Sender's Full Name" required> 
+                      </div> 
+    
+                      <!-- sender's address -->
+                      <div class="form-group input-group"> 
+                          <label for="saddress" class="sr-only"> 
+                            Sender's Permanent Address 
+                          </label> 
+                          <input type="text" class="form-control" name="saddress"
+                                 id="saddress" placeholder="Sender's Permanent Address" required> 
+                      </div> 
+
+                      <hr>
+    
+                      <!-- goods name -->
+                      <div class="form-group input-group"> 
+                          <label for="gname" class="sr-only"> 
+                            Name of Goods
+                          </label> 
+                          <input type="text" class="form-control" name="gname"
+                                 id="gname" placeholder="Name of Goods" required> 
+                      </div> 
+
+                      <!-- goods type -->
+                      <div class="form-group input-group"> 
+                        <label for="gtype" class="sr-only"> 
+                          Type of Goods
+                        </label> 
+                        <input type="text" class="form-control" name="gtype"
+                               id="gtype" placeholder="Type of Goods" required> 
+                    </div> 
+
+                    <!-- goods price  -->
+                    <div class="form-group input-group"> 
+                      <label for="price" class="sr-only"> 
+                        Price in Peso
+                      </label> 
+                      <input type="number" class="form-control" name="price"
+                             id="price" placeholder="Price in ₱" required> 
+                  </div> 
+
+                  <!-- shipping fee  -->
+                  <div class="form-group input-group"> 
+                    <label for="sfee" class="sr-only"> 
+                      Shipping Fee
+                    </label> 
+                    <input type="number" class="form-control" name="sfee"
+                           id="sfee" placeholder="Shipping Fee" required> 
+                </div> 
+
+                <!-- payment method  -->
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01">Payment Method</label>
+                  </div>
+                  <select class="custom-select" id="inputGroupSelect01" name="pmethod">
+                    <option selected>Choose...</option>
+                    <option value="Petty Cash">Petty Cash</option>
+                    <option value="COD">Cash on Delivery</option>
+                  </select>
+                </div>
+
+                <hr>
+
+                <!-- receiver's name  -->
+                <div class="form-group input-group"> 
+                  <label for="rname" class="sr-only"> 
+                    Receiver's Full Name
+                  </label> 
+                  <input type="text" class="form-control" name="rname"
+                         id="rname" placeholder="Receiver's Full Name" required> 
+              </div> 
+
+                <!-- receiver's address  -->
+              <div class="form-group input-group"> 
+                <label for="raddress" class="sr-only"> 
+                  Receiver's Address
+                </label> 
+                <input type="text" class="form-control" name="raddress"
+                       id="raddress" placeholder="Receiver's Address" required> 
+            </div> 
+
+              <!-- transaction date  -->
+            <div class="form-group input-group"> 
+              <label for="tdate" class="sr-only"> 
+                Date of Transaction
+              </label> 
+              <input type="datetime-local" class="form-control" name="tdate"
+                     id="tdate" placeholder="Date of Transaction"> 
+          </div> 
+
+
+
+                  </div> 
+    
+                  <!-- Modal footer -->
+                  <div class="footer"> 
+                  
+                      <button type="submit" name="submit" class="btn btn-primary">Send</button>
+                    
+                      
+                  </div> 
+    
+              </div> 
+          </div> 
+
+          
+      </div> 
+
+      
+    
+      <div class="modal" id="receiver"
+           role="dialog" aria-labelledby="myModalLabel"
+           aria-hidden="true"> 
+
+           <div class="modal-dialog "> 
+            <div class="modal-content"> 
+  
+                <!-- Modal root -->
+                <div class="m-header"> 
+                    <button class="close" data-dismiss="modal"> 
+                        × 
+                    </button> 
+                    <h4 class="myModalLabel"> View Goods  </h4> 
+                </div> 
+                <br>
+                <!-- Modal body -->
+                <div class="inputs"> 
+                  <div class="input-group rounded">
+                    <input type="search" class="form-control rounded" placeholder="Enter Code" aria-label="Search"
+                      aria-describedby="search-addon" name="receiver" />
+                    <!--span class="input-group-text border-0" id="search-addon">
+                      <i class="fas fa-search"></i>
+                    </span-->
+                  </div>
+                  <br>
+                  <button type="button" class="btn btn-primary">Search</button>
+
+                </div> 
+  
+                <!-- Modal footer -
+                <div class="footer"> 
+                    <button type="submit">Sign Up</button> 
+                    <p> 
+                        Already have an account?! 
+                        <a href="#loginModal" data-toggle="modal"
+                           data-dismiss="modal"> 
+                           Login! 
+                        </a> 
+                    </p> 
+                </div--> 
+  
+            </div> 
+           </div>
+
+
+    
+      
+      <!-- F O O T E R -->
+      <footer class="text-center fixed-bottom text-white bg-dark">
+        <br> © Copyright 2021 Delapeña Oclarit Ongcal Rabino 
+      </footer>
+
+   
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
+
+    
+  </body>
+</html>

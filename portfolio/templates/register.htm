@@ -1,0 +1,83 @@
+{% extends "base.htm" %}
+
+{% block title %} Sign up now! {% endblock title %}
+{%block href%} <a href="/login" data-toggle="modal"> {%endblock href%}
+{%block login%} LOG-IN {%endblock login%}
+
+{% block body %}
+      
+      <div class="container">
+
+        <div class="col-md-9 col-lg-7 col-xl-6 bg-gradient-clouds mt-3 mt-sm-5 mx-auto p-5 rounded text-center">
+        
+          <div class="row no-gutters">
+            <div class="col">
+              <img src="https://static6.depositphotos.com/1150740/642/v/600/depositphotos_6420807-stock-illustration-track-delivery-with-driver-and.jpg" height="64" width="64">
+              <h3>G T M S</h3>
+            </div>
+          </div>
+
+      
+          <div class="row mt-3 no-gutters">
+            <div class="col">
+              <div class="input-group">
+                <input class="form-control" name="first_name" placeholder="First Name" type="" required>
+              </div>
+            </div>
+          </div>
+      
+          <div class="row mt-3 no-gutters">
+            <div class="col">
+              <div class="input-group">
+                <input class="form-control" name="last_name" placeholder="Last Name" type="text" required>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mt-3 no-gutters">
+            <div class="col">
+              <div class="input-group">
+                <input class="form-control" name="Address" placeholder=" Permanent Address" type="text" required>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mt-3 no-gutters">
+            <div class="col">
+              <div class="input-group">
+                <input class="form-control" name="username" placeholder="Username" type="text" required>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mt-3 no-gutters">
+            <div class="col">
+              <div class="input-group">
+                <input class="form-control" name="email" placeholder="Email Address" type="text" required>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mt-3 no-gutters">
+            <div class="col">
+              <div class="input-group">
+                <input class="form-control" name="contact#" placeholder="Contact Number" type="text" required>
+              </div>
+            </div>
+          </div>
+      
+          <div class="row no-gutters">
+            <div class="col">
+              <button class="btn btn-block btn-dark mt-3" name="submit" type="submit">Register</button>
+              <p class="mt-3">Already have an account? <a href="/login">Login</a>.</p>
+            </div>
+          </div>
+      
+        </div>
+      
+      </div>
+
+{% endblock body %} 
+      
+      
+      

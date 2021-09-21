@@ -1,0 +1,67 @@
+{% extends "base.htm" %}
+
+{% block title %} Recent Transactions {% endblock title %}
+
+{% block body %}
+
+{%block login%} MY ACCOUNT {%endblock login%}
+
+  
+
+<div class="container">
+  <div class="jumbotron text-center">
+  <br> <br>
+    <h1>Recent Transactions</h1>      
+    <p>List of your goods invoice waiting for your loved ones to receive.</p>
+  </div>  
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+            {% for transaction in transaction %}  
+                <div class="card-body p-0">
+                     
+
+                    <hr class="my-5">
+
+                    <div class="row pb-5 p-5">
+                        <div class="col-md-6">
+
+                            <p class="font-weight-bold mb-4"><strong> Invoice #: </strong> </p>
+                            <p class="font-weight-bold mb-4"><br> <strong> Transaction Information: </strong> </p>
+                            <p class="mb-1"><span class="text-muted"><strong>Date of Transaction: </strong> <br> </span>{{transaction.date}}</p>
+                            <p class="mb-1"><span class="text-muted"><strong>Sender: </strong> <br> </span>{{transaction.sender}}</p>
+                            <p class="mb-1"><span class="text-muted"><strong>Permanent Address: </strong> <br> </span>{{transaction.address}}</p>
+                            <p class="mb-1"><span class="text-muted"><strong>Receiver: </strong> <br> </span>{{transaction.receiver}}</p>
+                            <p class="mb-1"><span class="text-muted"><strong>Delivery Address: </strong> <br> </span>{{transaction.destination}}</p>
+                        </div>
+
+                        <div class="col-md-6 text-right">
+
+                            <p class="font-weight-bold mb-4"><strong>Goods Details:</strong></p>
+                            <p class="mb-1"><span class="text-muted"><strong>Name of Goods: </strong> </span> {{transaction.goods}}</p>
+                            <p class="mb-1"><span class="text-muted"><strong>Type of Goods: </strong> </span> {{transaction.gtype}}</p>
+                            <p class="mb-1"><span class="text-muted"><strong>Price of Goods: </strong></span> {{transaction.price}}</p>
+
+                            <p class="font-weight-bold mb-4"> <br> <br> <strong>Payment Details: </strong></p>
+                            <p class="mb-1"><span class="text-muted"><strong>Pament Method:</strong> </span> {{transaction.method}}</p>
+                            <p class="mb-1"><span class="text-muted"><strong>Shipping Fee:</strong> </span> {{transaction.fee}}</p>
+                            <!--p class="mb-1"><span class="text-muted">Name: </span> John Doe</p-->
+                        </div>
+                   
+
+                   
+                            
+                </div>
+                 {% endfor %}
+            </div>
+        </div>
+    </div>
+    
+
+</div>
+
+{% endblock body %}
